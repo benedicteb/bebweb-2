@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Link } from "gatsby";
+
 import colors from "../colors";
 
 const DirectoryLink: FC<{ name: string; target: string }> = ({

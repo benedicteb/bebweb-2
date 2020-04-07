@@ -1,10 +1,12 @@
 import React from "react";
+
 import Terminal from "../components/Terminal";
 import Layout from "../components/Layout";
 import Menu from "../components/Menu";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
 import FileListing from "../components/FileListing";
+
 import RenderOnReady from "../components/animation/RenderOnReady";
 import ReadyInstantly from "../components/animation/ReadyInstantly";
 

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+
 import colors from "../colors";
 
 const Directory: FC<{ name: string }> = ({ name }) => (

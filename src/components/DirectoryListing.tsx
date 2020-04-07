@@ -1,7 +1,9 @@
-import Prompt from "./Prompt";
 import React, { FC } from "react";
+
+import Prompt from "./Prompt";
 import Directory from "./Directory";
 import FileListing from "./FileListing";
+
 import RenderOnReady from "./animation/RenderOnReady";
 
 const DirectoryListing: FC<{

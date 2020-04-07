@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+
 import { LETTER_RENDER_DELAY_MILLIS } from "../../animationConstants";
 import useInterval from "../../useInterval";
 
