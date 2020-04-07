@@ -28,5 +28,6 @@ module.exports = {
         strict: true,
       },
     },
+    `gatsby-plugin-preload-fonts`,
   ],
 };
