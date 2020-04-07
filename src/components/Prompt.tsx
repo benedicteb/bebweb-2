@@ -1,15 +1,32 @@
 import React, { FC, useState } from "react";
 import colors from "../colors";
 import useInterval from "../useInterval";
+import LetterByLetter from "./LetterByLetter";
 
 const Prompt: FC<{
   command?: string;
   cwd?: string;
   blinkingCursor?: boolean;
-}> = ({ command = "", blinkingCursor = false, cwd = "~" }) => (
+  animate?: boolean;
+  onAnimationFinished?: () => void;
+}> = ({
+  command = "",
+  blinkingCursor = false,
+  cwd = "~",
+  animate = false,
+  onAnimationFinished = () => {},
+}) => (
   <p>
     <span style={{ color: colors.arrow }}>➜</span>{" "}
-    <span style={{ color: colors.directory }}>{cwd}</span> {command}
+    <span style={{ color: colors.directory }}>{cwd}</span>{" "}
+    {animate ? (
+      <LetterByLetter
+        onAnimationFinished={onAnimationFinished}
+        text={command}
+      />
+    ) : (
+      command
+    )}
     {blinkingCursor ? <BlinkingCursor /> : null}
   </p>
 );

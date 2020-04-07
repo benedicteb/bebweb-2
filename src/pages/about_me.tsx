@@ -6,24 +6,34 @@ import AboutMe from "../components/AboutMe";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
 import DirectoryListing from "../components/DirectoryListing";
+import RenderOnReady from "../components/RenderOnReady";
+import ReadyInstantly from "../components/ReadyInstantly";
 
 const AboutMePage = () => (
   <Layout>
     <SEO title="About me" />
 
     <Terminal>
-      <Menu activePage={"about_me"} />
+      <Menu />
 
-      <DirectoryListing
-        cwd={"about_me"}
-        files={["benedicte.txt", "hello.rtf"]}
-        directories={["more_stuff"]}
-      />
+      <RenderOnReady>
+        <Prompt animate={true} command={"cd about_me"} />
 
-      <Prompt cwd={"about_me"} command={"cat benedicte.txt"} />
-      <p>Hello! I am me.</p>
+        <DirectoryListing
+          animatePrompt={true}
+          cwd={"about_me"}
+          files={["benedicte.txt", "hello.rtf"]}
+          directories={["more_stuff"]}
+        />
 
-      <Prompt cwd={"about_me"} blinkingCursor={true} />
+        <Prompt animate={true} cwd={"about_me"} command={"cat benedicte.txt"} />
+
+        <ReadyInstantly>
+          <p>Hello! I am me.</p>
+        </ReadyInstantly>
+
+        <Prompt cwd={"about_me"} blinkingCursor={true} />
+      </RenderOnReady>
     </Terminal>
   </Layout>
 );

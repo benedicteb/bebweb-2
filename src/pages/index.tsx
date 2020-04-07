@@ -5,21 +5,31 @@ import Menu from "../components/Menu";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
 import FileListing from "../components/FileListing";
+import RenderOnReady from "../components/RenderOnReady";
+import ReadyInstantly from "../components/ReadyInstantly";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
     <Terminal>
-      <Menu activePage={"~"} />
+      <Menu />
 
-      <Prompt command={"ls -lrth"} />
-      <FileListing name={"home.txt"} />
+      <RenderOnReady>
+        <Prompt animate={true} command={"ls -lrth"} />
 
-      <Prompt command={"cat home.txt"} />
-      <p>Welcome!</p>
+        <ReadyInstantly>
+          <FileListing name={"home.txt"} />
+        </ReadyInstantly>
 
-      <Prompt blinkingCursor={true} />
+        <Prompt animate={true} command={"cat home.txt"} />
+
+        <ReadyInstantly>
+          <p>Welcome!</p>
+        </ReadyInstantly>
+
+        <Prompt blinkingCursor={true} />
+      </RenderOnReady>
     </Terminal>
   </Layout>
 );

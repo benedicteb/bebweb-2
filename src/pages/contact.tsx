@@ -5,68 +5,90 @@ import Menu from "../components/Menu";
 import SEO from "../components/SEO";
 import DirectoryListing from "../components/DirectoryListing";
 import Prompt from "../components/Prompt";
+import RenderOnReady from "../components/RenderOnReady";
+import ReadyInstantly from "../components/ReadyInstantly";
 
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" />
 
     <Terminal>
-      <Menu activePage={"contact"} />
+      <Menu />
 
-      <DirectoryListing
-        cwd={"contact"}
-        files={["github.txt", "keybase.txt", "twitter.txt", "linkedin.txt"]}
-        directories={["info"]}
-      />
+      <RenderOnReady>
+        <Prompt animate={true} command={"cd contact"} />
 
-      <Prompt cwd={"contact"} command={"cat info/misc.txt"} />
-      <p>You can reach me in these places!</p>
+        <DirectoryListing
+          animatePrompt={true}
+          cwd={"contact"}
+          files={["github.txt", "keybase.txt", "twitter.txt", "linkedin.txt"]}
+          directories={["info"]}
+        />
 
-      <Prompt cwd={"contact"} command={"cat github.txt"} />
-      <p>
-        <a
-          style={{ color: "white" }}
-          href={"https://github.com/benedicteb"}
-          target={"_blank"}
-        >
-          https://github.com/benedicteb
-        </a>
-      </p>
+        <Prompt animate={true} cwd={"contact"} command={"cat info/misc.txt"} />
 
-      <Prompt cwd={"contact"} command={"cat keybase.txt"} />
-      <p>
-        <a
-          style={{ color: "white" }}
-          href={"https://keybase.io/benedebr"}
-          target={"_blank"}
-        >
-          https://keybase.io/benedebr
-        </a>
-      </p>
+        <ReadyInstantly>
+          <p>You can reach me in these places!</p>
+        </ReadyInstantly>
 
-      <Prompt cwd={"contact"} command={"cat twitter.txt"} />
-      <p>
-        <a
-          style={{ color: "white" }}
-          href={"https://twitter.com/benedebr"}
-          target={"_blank"}
-        >
-          https://twitter.com/benedebr
-        </a>
-      </p>
+        <Prompt animate={true} cwd={"contact"} command={"cat github.txt"} />
 
-      <Prompt cwd={"contact"} command={"cat linkedin.txt"} />
-      <p>
-        <a
-          style={{ color: "white" }}
-          href={"https://www.linkedin.com/in/benedicte-emilie/"}
-          target={"_blank"}
-        >
-          https://www.linkedin.com/in/benedicte-emilie/
-        </a>
-      </p>
+        <ReadyInstantly>
+          <p>
+            <a
+              style={{ color: "white" }}
+              href={"https://github.com/benedicteb"}
+              target={"_blank"}
+            >
+              https://github.com/benedicteb
+            </a>
+          </p>
+        </ReadyInstantly>
 
-      <Prompt cwd={"contact"} blinkingCursor={true} />
+        <Prompt animate={true} cwd={"contact"} command={"cat keybase.txt"} />
+
+        <ReadyInstantly>
+          <p>
+            <a
+              style={{ color: "white" }}
+              href={"https://keybase.io/benedebr"}
+              target={"_blank"}
+            >
+              https://keybase.io/benedebr
+            </a>
+          </p>
+        </ReadyInstantly>
+
+        <Prompt animate={true} cwd={"contact"} command={"cat twitter.txt"} />
+
+        <ReadyInstantly>
+          <p>
+            <a
+              style={{ color: "white" }}
+              href={"https://twitter.com/benedebr"}
+              target={"_blank"}
+            >
+              https://twitter.com/benedebr
+            </a>
+          </p>
+        </ReadyInstantly>
+
+        <Prompt animate={true} cwd={"contact"} command={"cat linkedin.txt"} />
+
+        <ReadyInstantly>
+          <p>
+            <a
+              style={{ color: "white" }}
+              href={"https://www.linkedin.com/in/benedicte-emilie/"}
+              target={"_blank"}
+            >
+              https://www.linkedin.com/in/benedicte-emilie/
+            </a>
+          </p>
+        </ReadyInstantly>
+
+        <Prompt animate={true} cwd={"contact"} blinkingCursor={true} />
+      </RenderOnReady>
     </Terminal>
   </Layout>
 );
