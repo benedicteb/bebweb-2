@@ -28,11 +28,5 @@ module.exports = {
         strict: true,
       },
     },
-    {
-      resolve: "gatsby-plugin-typography",
-      options: {
-        pathToConfigModule: "src/typography.ts",
-      },
-    },
   ],
 };
