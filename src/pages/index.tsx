@@ -18,6 +18,8 @@ const IndexPage = () => (
 
       <Prompt command={"cat home.txt"} />
       <p>Welcome!</p>
+
+      <Prompt blinkingCursor={true} />
     </Terminal>
   </Layout>
 );

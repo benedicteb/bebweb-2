@@ -22,6 +22,8 @@ const AboutMePage = () => (
 
       <Prompt cwd={"about_me"} command={"cat benedicte.txt"} />
       <p>Hello! I am me.</p>
+
+      <Prompt cwd={"about_me"} blinkingCursor={true} />
     </Terminal>
   </Layout>
 );

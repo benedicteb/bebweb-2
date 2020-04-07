@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Terminal from "../components/Terminal";
+import Prompt from "../components/Prompt";
 
 const NotFoundPage = () => (
   <Layout>
@@ -10,6 +11,8 @@ const NotFoundPage = () => (
 
     <Terminal>
       <p>Not found</p>
+
+      <Prompt blinkingCursor={true} />
     </Terminal>
   </Layout>
 );

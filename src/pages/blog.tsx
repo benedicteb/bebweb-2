@@ -3,6 +3,7 @@ import Terminal from "../components/Terminal";
 import Layout from "../components/Layout";
 import Menu from "../components/Menu";
 import SEO from "../components/SEO";
+import Prompt from "../components/Prompt";
 
 const BlogPage = () => (
   <Layout>
@@ -10,6 +11,8 @@ const BlogPage = () => (
 
     <Terminal>
       <Menu activePage={"blog"} />
+
+      <Prompt cwd={"blog"} blinkingCursor={true} />
     </Terminal>
   </Layout>
 );

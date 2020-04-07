@@ -65,6 +65,8 @@ const ContactPage = () => (
           https://www.linkedin.com/in/benedicte-emilie/
         </a>
       </p>
+
+      <Prompt cwd={"contact"} blinkingCursor={true} />
     </Terminal>
   </Layout>
 );
