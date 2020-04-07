@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import Header from "./Header";
@@ -6,6 +6,12 @@ import Header from "./Header";
 import "./Layout.css";
 
 const Layout: React.FC = ({ children }) => {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  document.fonts.ready.then(() => {
+    setFontsLoaded(true);
+  });
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -15,6 +21,10 @@ const Layout: React.FC = ({ children }) => {
       }
     }
   `);
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <>
