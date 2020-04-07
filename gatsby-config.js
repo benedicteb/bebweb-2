@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Benedicte`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -33,8 +33,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        strict: true
+        strict: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-typography",
+      options: {
+        pathToConfigModule: "src/typography.ts",
       },
     },
   ],
-}
+};

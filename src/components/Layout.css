@@ -1,3 +1,7 @@
+/*
+ * Default stuff from Gatsby
+ */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -619,4 +623,28 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/*
+ * Added by me
+ */
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  background-color: #04044c;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
 }
