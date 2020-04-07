@@ -23,16 +23,48 @@ const ContactPage = () => (
       <p>You can reach me in these places!</p>
 
       <Prompt cwd={"contact"} command={"cat github.txt"} />
-      <p>https://github.com/benedicteb</p>
+      <p>
+        <a
+          style={{ color: "white" }}
+          href={"https://github.com/benedicteb"}
+          target={"_blank"}
+        >
+          https://github.com/benedicteb
+        </a>
+      </p>
 
       <Prompt cwd={"contact"} command={"cat keybase.txt"} />
-      <p>https://keybase.io/benedebr</p>
+      <p>
+        <a
+          style={{ color: "white" }}
+          href={"https://keybase.io/benedebr"}
+          target={"_blank"}
+        >
+          https://keybase.io/benedebr
+        </a>
+      </p>
 
       <Prompt cwd={"contact"} command={"cat twitter.txt"} />
-      <p>https://twitter.com/benedebr</p>
+      <p>
+        <a
+          style={{ color: "white" }}
+          href={"https://twitter.com/benedebr"}
+          target={"_blank"}
+        >
+          https://twitter.com/benedebr
+        </a>
+      </p>
 
       <Prompt cwd={"contact"} command={"cat linkedin.txt"} />
-      <p>https://www.linkedin.com/in/benedicte-emilie/</p>
+      <p>
+        <a
+          style={{ color: "white" }}
+          href={"https://www.linkedin.com/in/benedicte-emilie/"}
+          target={"_blank"}
+        >
+          https://www.linkedin.com/in/benedicte-emilie/
+        </a>
+      </p>
     </Terminal>
   </Layout>
 );
