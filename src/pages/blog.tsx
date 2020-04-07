@@ -4,8 +4,8 @@ import Layout from "../components/Layout";
 import Menu from "../components/Menu";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
-import RenderOnReady from "../components/RenderOnReady";
-import ReadyInstantly from "../components/ReadyInstantly";
+import RenderOnReady from "../components/animation/RenderOnReady";
+import ReadyInstantly from "../components/animation/ReadyInstantly";
 
 const BlogPage = () => (
   <Layout>

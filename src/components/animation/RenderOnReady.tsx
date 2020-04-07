@@ -1,7 +1,7 @@
-import React, { cloneElement, FC, ReactElement, useState } from "react";
+import React, { cloneElement, FC, ReactNode, useState } from "react";
 
 const RenderOnReady: FC<{
-  children: ReactElement[];
+  children?: ReactNode[];
   onFinish?: () => void;
 }> = ({ children, onFinish = () => {} }) => {
   const [renderedComponents, setRenderedComponents] = useState(1);

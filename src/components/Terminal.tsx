@@ -1,5 +1,4 @@
-import React, { ReactNode, FC } from "react";
-import Prompt from "./Prompt";
+import React, { FC, ReactNode } from "react";
 
 const Terminal: FC<{ children: ReactNode }> = ({ children }) => (
   <div

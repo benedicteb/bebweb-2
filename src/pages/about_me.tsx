@@ -5,8 +5,8 @@ import Menu from "../components/Menu";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
 import DirectoryListing from "../components/DirectoryListing";
-import RenderOnReady from "../components/RenderOnReady";
-import ReadyInstantly from "../components/ReadyInstantly";
+import RenderOnReady from "../components/animation/RenderOnReady";
+import ReadyInstantly from "../components/animation/ReadyInstantly";
 
 const AboutMePage = () => (
   <Layout>

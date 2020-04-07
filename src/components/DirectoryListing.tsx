@@ -2,7 +2,7 @@ import Prompt from "./Prompt";
 import React, { FC } from "react";
 import Directory from "./Directory";
 import FileListing from "./FileListing";
-import RenderOnReady from "./RenderOnReady";
+import RenderOnReady from "./animation/RenderOnReady";
 
 const DirectoryListing: FC<{
   cwd: string;
