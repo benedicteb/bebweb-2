@@ -2,7 +2,6 @@ import React from "react";
 import Terminal from "../components/Terminal";
 import Layout from "../components/Layout";
 import Menu from "../components/Menu";
-import AboutMe from "../components/AboutMe";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
 import DirectoryListing from "../components/DirectoryListing";
