@@ -45,6 +45,7 @@ const DirectoryListing: FC<{
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "flex-start",
+                    flexWrap: "wrap",
                   }}
                 >
                   {directories.map(directory => (
