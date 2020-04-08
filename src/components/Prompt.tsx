@@ -1,9 +1,9 @@
 import React, { FC, useState } from "react";
 
 import colors from "../colors";
-import useInterval from "../useInterval";
 
 import LetterByLetter from "./animation/LetterByLetter";
+import useInterval from "../hooks/useInterval";
 
 const Prompt: FC<{
   command?: string;

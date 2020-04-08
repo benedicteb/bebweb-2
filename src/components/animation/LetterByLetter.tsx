@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 
 import { LETTER_RENDER_DELAY_MILLIS } from "../../animationConstants";
-import useInterval from "../../useInterval";
+import useInterval from "../../hooks/useInterval";
 
 const LetterByLetter: FC<{ text: string; onAnimationFinished: () => void }> = ({
   onAnimationFinished,

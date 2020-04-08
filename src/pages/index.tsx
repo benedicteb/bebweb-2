@@ -5,10 +5,14 @@ import Layout from "../components/Layout";
 import Menu from "../components/Menu";
 import SEO from "../components/SEO";
 import Prompt from "../components/Prompt";
-import FileListing from "../components/FileListing";
+import FileLong from "../components/FileLong";
 
 import RenderOnReady from "../components/animation/RenderOnReady";
 import ReadyInstantly from "../components/animation/ReadyInstantly";
+import { BREAK_POINTS } from "../mediaQueries";
+import Media from "react-media";
+import FileShort from "../components/FileShort";
+import DirectoryListing from "../components/DirectoryListing";
 
 const IndexPage = () => (
   <Layout>
@@ -18,11 +22,11 @@ const IndexPage = () => (
       <Menu />
 
       <RenderOnReady>
-        <Prompt animate={true} command={"ls -lrth"} />
-
-        <ReadyInstantly>
-          <FileListing name={"home.txt"} />
-        </ReadyInstantly>
+        <DirectoryListing
+          animatePrompt={true}
+          files={["home.txt"]}
+          directories={[]}
+        />
 
         <Prompt animate={true} command={"cat home.txt"} />
 
