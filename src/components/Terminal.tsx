@@ -5,6 +5,7 @@ const Terminal: FC<{ children: ReactNode }> = ({ children }) => (
     style={{
       backgroundColor: "black",
       margin: "20px",
+      marginBottom: 0,
       padding: "5px",
       color: "white",
       fontFamily: "Oxygen mono",
