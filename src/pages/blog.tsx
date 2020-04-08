@@ -30,7 +30,7 @@ const BlogPage = () => (
         <Prompt
           animate={true}
           cwd={"blog"}
-          command={"echo 'Nothing here yet!"}
+          command={"echo 'Nothing here yet!'"}
         />
 
         <ReadyInstantly>
