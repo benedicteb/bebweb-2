@@ -8,6 +8,7 @@ import Prompt from "../components/Prompt";
 
 import RenderOnReady from "../components/animation/RenderOnReady";
 import ReadyInstantly from "../components/animation/ReadyInstantly";
+import DirectoryListing from "../components/DirectoryListing";
 
 const BlogPage = () => (
   <Layout>
@@ -19,7 +20,12 @@ const BlogPage = () => (
       <RenderOnReady>
         <Prompt animate={true} command={"cd blog"} />
 
-        <Prompt animate={true} cwd={"blog"} command={"ls -lrth"} />
+        <DirectoryListing
+          animatePrompt={true}
+          cwd={"blog"}
+          files={[]}
+          directories={[]}
+        />
 
         <Prompt
           animate={true}

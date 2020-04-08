@@ -37,7 +37,7 @@ const DirectoryListing: FC<{
             command={matches.small ? "ls" : "ls -lrth"}
           />
 
-          <>
+          {files.length > 0 || directories.length > 0 ? (
             <>
               {matches.small && (
                 <div
@@ -70,7 +70,9 @@ const DirectoryListing: FC<{
                 </>
               )}
             </>
-          </>
+          ) : (
+            <></>
+          )}
         </RenderOnReady>
       )}
     </Media>
